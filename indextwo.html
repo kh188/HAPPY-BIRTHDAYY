@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f9a8d4">
+    <title>Тёплая благодарность</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Dancing Script"', 'cursive'],
+                        body: ['Nunito', 'sans-serif']
+                    },
+                    boxShadow: {
+                        card: '0 12px 40px -12px rgba(236, 72, 153, 0.35)',
+                        btn: '0 6px 18px -4px rgba(236, 72, 153, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="font-body bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200 min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
+
+    <div id="hearts" aria-hidden="true"></div>
+
+    <div class="fixed top-3 right-3 z-50 flex gap-1.5">
+        <button type="button" data-set-lang="uz"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/70 text-pink-600 text-xs font-bold backdrop-blur-sm border border-pink-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300">
+            UZ
+        </button>
+        <button type="button" data-set-lang="ru"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/70 text-pink-600 text-xs font-bold backdrop-blur-sm border border-pink-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300">
+            RU
+        </button>
+    </div>
+
+    <main class="relative z-10 w-full max-w-xl">
+        <div class="fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl shadow-card p-6 sm:p-8 md:p-10 text-center border border-pink-200">
+
+            <div class="flex justify-center text-2xl sm:text-3xl mb-4 pulse-soft">
+                <span>🌷</span>
+            </div>
+
+            <div data-lang="uz">
+                <h3 class="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold text-left sm:text-center">
+                    Siz — g'ayrioddiy mehribon, g'amxo'r va yorug' insonsiz. Sizda shuncha muhabbat, mehr-muruvvat va sabr
+                    bor —ki, yoningizda doim tinchlik va uvoyat bo'ladi. Buni siz bilan ishlayotgan bolajonlar juda yaxshi
+                    his qiladi. Ularning baxti bor — ularning yonida shunday mehribon va tushunuvchan tarbiyachi bor. ❤️
+                    Men chin dildan tilaymanki, har kuni atrofdagilarga baxsh etayotgan barcha xayriyaingiz albatta ikki
+                    barobar qaytib kelsin. Sizni doim sevuvchi va yaqin insonlar o'rab tursin, uyda muhabbat, baxt va
+                    uvoyat bo'lsin, qalbingizda esa tinchlik va totuvlik bo'lsin.
+                </h3>
+            </div>
+
+            <div data-lang="ru" class="lang-hidden">
+                <h3 class="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold text-left sm:text-center">
+                    Вы — невероятно добрый, заботливый и светлый человек. В Вас столько тепла, любви и терпения, что рядом с Вами
+                    всегда становится спокойно и уютно. Особенно это чувствуют детки, с которыми Вы работаете. Им очень повезло, что
+                    рядом с ними есть такой добрый и понимающий воспитатель. ❤️
+                    Я искренне желаю, чтобы всё добро, которое Вы каждый день дарите окружающим, обязательно возвращалось к Вам
+                    вдвойне. Пусть Вас всегда окружают любящие и родные люди, пусть в доме будут тепло, счастье и уют, а в сердце —
+                    гармония и спокойствие.
+                </h3>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+                <a href="./serdse.html"
+                    class="btn-press inline-flex items-center justify-center gap-2 min-h-[48px] w-full sm:w-auto px-10 py-3 rounded-full bg-gradient-to-r from-pink-400 to-rose-400 text-white font-bold text-2xl shadow-btn hover:from-pink-500 hover:to-rose-500 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-pink-200"
+                    aria-label="Далее">
+                    ❤️
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

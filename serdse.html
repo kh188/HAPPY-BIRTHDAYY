@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f9a8d4">
+    <title>От всего сердца</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Dancing Script"', 'cursive'],
+                        body: ['Nunito', 'sans-serif']
+                    },
+                    boxShadow: {
+                        card: '0 12px 40px -12px rgba(236, 72, 153, 0.35)',
+                        btn: '0 6px 18px -4px rgba(236, 72, 153, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="font-body bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200 min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
+
+    <div id="hearts" aria-hidden="true"></div>
+
+    <div class="fixed top-3 right-3 z-50 flex gap-1.5">
+        <button type="button" data-set-lang="uz"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/70 text-pink-600 text-xs font-bold backdrop-blur-sm border border-pink-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300">
+            UZ
+        </button>
+        <button type="button" data-set-lang="ru"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/70 text-pink-600 text-xs font-bold backdrop-blur-sm border border-pink-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300">
+            RU
+        </button>
+    </div>
+
+    <main class="relative z-10 w-full max-w-xl">
+        <div class="fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl shadow-card p-6 sm:p-8 md:p-10 text-center border border-pink-200">
+
+            <div class="flex justify-center text-2xl sm:text-3xl mb-4 pulse-soft">
+                <span>🌸</span>
+            </div>
+
+            <div data-lang="uz">
+                <h3 class="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold text-left sm:text-center">
+                    Har bir kuningiz tabassum, yoqimli lahzalar va muhabbatga to'lsin. Tilaymanki, barcha orzularingiz
+                    ro'yobga chiqsin, hayot sizni yoqimli ajablanuvlar bilan xursand qilsin, oldinga esa yana ko'p baxtli
+                    yillar va go'zal xotiralar bo'lsin. 🌸
+                    Mehribonligingiz, g'amxo'rligingiz va katta qalbingiz uchun rahmat. Men sizni juda ko'p sevaman,
+                    qadrlayman va chin dildan eng go'zalini tilayman!
+                    Tug'ilgan kuningiz muborak, mening aziz xolam! ❤️
+                    Sizni mahkam quchoqlayman! 🥰
+                </h3>
+            </div>
+
+            <div data-lang="ru" class="lang-hidden">
+                <h3 class="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-semibold text-left sm:text-center">
+                    Пусть каждый Ваш день будет наполнен улыбками, приятными моментами и любовью. Желаю, чтобы все Ваши мечты
+                    сбывались, чтобы жизнь радовала Вас приятными сюрпризами, а впереди было ещё много счастливых лет и прекрасных
+                    воспоминаний. 🌸
+                    Спасибо Вам за Вашу доброту, заботу и большое сердце. Я очень Вас люблю, ценю и от всей души желаю Вам самого
+                    прекрасного!
+                    С днём рождения, моя дорогая тётя Феруза! ❤️
+                    Крепко Вас обнимаю! 🥰
+                </h3>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+                <a href="./kones.html"
+                    class="btn-press inline-flex items-center justify-center gap-2 min-h-[48px] w-full sm:w-auto px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 to-rose-400 text-white font-bold text-base sm:text-lg shadow-btn hover:from-pink-500 hover:to-rose-500 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-pink-200">
+                    <span data-lang="uz">davom eting ❤️</span>
+                    <span data-lang="ru" class="lang-hidden">далее ❤️</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

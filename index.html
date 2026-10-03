@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#9d174d">
+    <title>🎁 Maxfiy sovg'a | Секретный подарок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Dancing Script"', 'cursive'],
+                        body: ['Nunito', 'sans-serif']
+                    },
+                    boxShadow: {
+                        card: '0 12px 40px -12px rgba(236, 72, 153, 0.4)',
+                        btn: '0 6px 18px -4px rgba(236, 72, 153, 0.55)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="font-body bg-gradient-to-br from-fuchsia-900 via-pink-800 to-rose-900 min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
+
+    <div id="hearts" aria-hidden="true"></div>
+
+    <div class="fixed top-3 right-3 z-50 flex gap-1.5">
+        <button type="button" data-set-lang="uz"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-pink-300">
+            UZ
+        </button>
+        <button type="button" data-set-lang="ru"
+            class="lang-btn min-h-[36px] px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-pink-300">
+            RU
+        </button>
+    </div>
+
+    <main class="relative z-10 w-full max-w-md">
+        <div class="fade-in-up bg-white/95 backdrop-blur-sm rounded-3xl shadow-card p-6 sm:p-8 text-center border border-pink-200 glow-pulse">
+
+            <div class="gift-wiggle text-6xl sm:text-7xl mb-4 select-none">🎁</div>
+
+            <div class="flex justify-center gap-2 text-xl sm:text-2xl mb-3 pulse-soft">
+                <span>✨</span>
+                <span>🔒</span>
+                <span>✨</span>
+            </div>
+
+            <div data-lang="uz">
+                <h1 class="font-script shimmer-text text-3xl sm:text-4xl font-bold leading-tight">
+                    Maxfiy sovg'a...
+                </h1>
+                <p class="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed font-semibold">
+                    Kimdir siz haqingizda juda ko'p yozgan. Bu yerda siz uchun maxfiy narsa yashiringan... 💌
+                </p>
+                <p class="mt-3 text-pink-500 text-sm sm:text-base font-bold">
+                    Uni ochmoqchimisiz? 👀
+                </p>
+            </div>
+
+            <div data-lang="ru" class="lang-hidden">
+                <h1 class="font-script shimmer-text text-3xl sm:text-4xl font-bold leading-tight">
+                    Секретный подарок...
+                </h1>
+                <p class="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed font-semibold">
+                    Кто-то написал о Вас очень много. Здесь спрятано кое-что для Вас... 💌
+                </p>
+                <p class="mt-3 text-pink-500 text-sm sm:text-base font-bold">
+                    Хотите открыть? 👀
+                </p>
+            </div>
+
+            <div class="mt-6">
+                <button type="button" id="open-btn"
+                    class="btn-press inline-flex items-center justify-center gap-2 min-h-[52px] w-full px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold text-lg shadow-btn hover:from-pink-600 hover:to-rose-600 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-pink-300">
+                    <span data-lang="uz">Ochish ✨</span>
+                    <span data-lang="ru" class="lang-hidden">Открыть ✨</span>
+                </button>
+            </div>
+
+            <div id="lang-choice" class="hidden mt-6">
+                <div data-lang="uz">
+                    <p class="text-gray-600 font-bold mb-3">Tilni tanlang 🇺🇿</p>
+                </div>
+                <div data-lang="ru" class="lang-hidden">
+                    <p class="text-gray-600 font-bold mb-3">Выберите язык 🇷🇺</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <button type="button" data-pick-lang="uz"
+                        class="btn-press inline-flex items-center justify-center gap-2 min-h-[52px] flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-btn hover:from-emerald-600 hover:to-teal-600 focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                        🇺🇿 O'zbekcha
+                    </button>
+                    <button type="button" data-pick-lang="ru"
+                        class="btn-press inline-flex items-center justify-center gap-2 min-h-[52px] flex-1 px-6 py-3 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold shadow-btn hover:from-sky-600 hover:to-indigo-600 focus:outline-none focus:ring-4 focus:ring-sky-200">
+                        🇷🇺 Русский
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="unlock-overlay" class="hidden fixed inset-0 z-[60] bg-fuchsia-950/80 flex items-center justify-center p-4">
+        <div class="pop-in text-center">
+            <div class="text-5xl sm:text-6xl mb-4 pulse-soft">🎉</div>
+            <p class="text-white font-script text-3xl sm:text-4xl font-bold mb-2">
+                <span data-lang="uz">Ochilmoqda...</span>
+                <span data-lang="ru" class="lang-hidden">Открывается...</span>
+            </p>
+            <div class="text-pink-300 font-extrabold text-5xl sm:text-6xl">
+                <span id="countdown-num">3</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
